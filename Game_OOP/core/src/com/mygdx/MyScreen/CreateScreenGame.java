@@ -10,11 +10,13 @@ public class CreateScreenGame extends Game {
 	public void create () {
 		batch = new SpriteBatch();;
 		this.setScreen(new MyMainMenu(this));
+
 	}
 
 	@Override
 	public void render () {
 		super.render();
+
 	}
 
 	@Override

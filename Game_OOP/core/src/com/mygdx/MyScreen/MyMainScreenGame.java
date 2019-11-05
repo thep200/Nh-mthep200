@@ -15,9 +15,10 @@ public class MyMainScreenGame implements Screen {
     float x = 0;
     float y = 880;
 
+    private GameField gameField;
     Texture img;
     Animation[] animations ;
-    float startime ;
+    float startTime;
 
     public MyMainScreenGame(CreateScreenGame game){
         this.game = game ;
@@ -29,8 +30,9 @@ public class MyMainScreenGame implements Screen {
 
     @Override
     public void show() {
-        img = new Texture("New - Map.jpg");
 
+        img = new Texture("New - Map1.jpg");
+        gameField=new GameField();
         animations = new Animation[7] ;
         TextureRegion[][] AnimationText = TextureRegion.split(new Texture("001.png"),33, 43);
         animations[1] = new Animation(0.2f, AnimationText[0]);
@@ -42,7 +44,7 @@ public class MyMainScreenGame implements Screen {
         Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        startime += delta ;
+        startTime += delta ;
 
         if (Gdx.input.isKeyPressed(Input.Keys.UP)){
             y += speed*Gdx.graphics.getDeltaTime() ;
@@ -60,8 +62,8 @@ public class MyMainScreenGame implements Screen {
         game.batch.begin();
 
         game.batch.draw(img,0,0);
-
-        game.batch.draw((TextureRegion) animations[1].getKeyFrame(startime,true), x, y,50,65);
+        game.batch.draw((TextureRegion) animations[1].getKeyFrame(startTime,true), x, y,50,65);
+        gameField.draw(game.batch);
 
         game.batch.end();
     }

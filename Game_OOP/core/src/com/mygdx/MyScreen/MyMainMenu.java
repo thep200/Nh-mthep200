@@ -8,22 +8,22 @@ import com.badlogic.gdx.graphics.Texture;
 public class MyMainMenu implements Screen {
 
     CreateScreenGame game ;
-    Texture Backgroud ;
+    Texture backGround;
 
     public static final float Width_Button = 400 ;
     public static final float Height_Button = 350 ;
 
-    Texture PlayActive ;
-    Texture PlayWait ;
+    Texture playActive;
+    Texture playWait;
 
-    Texture ExitActive ;
-    Texture ExitWait ;
+    Texture exitActive;
+    Texture exitWait;
 
-    Texture SoundActive ;
-    Texture SoundWait ;
+    Texture soundActive;
+    Texture soundWait;
 
-    Texture InstructorActive ;
-    Texture InstructorWait ;
+    Texture instructorActive;
+    Texture instructorWait;
 
     public MyMainMenu(CreateScreenGame game){
         this.game = game ;
@@ -36,13 +36,13 @@ public class MyMainMenu implements Screen {
 
     @Override
     public void show() {
-        Backgroud = new Texture("BackgroundGame.png");
+        backGround = new Texture("BackgroundGame.png");
 
-        PlayActive = new Texture("Play-Active.png");
-        PlayWait = new Texture("Play-Wait.png");
+        playActive = new Texture("Play-Active.png");
+        playWait = new Texture("Play-Wait.png");
 
-        ExitActive = new Texture("Exit-Active.png");
-        ExitWait = new Texture("Exit-Wait.png");
+        exitActive = new Texture("Exit-Active.png");
+        exitWait = new Texture("Exit-Wait.png");
     }
 
     @Override
@@ -51,19 +51,19 @@ public class MyMainMenu implements Screen {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         game.batch.begin();
-        game.batch.draw(Backgroud,0,0);
+        game.batch.draw(backGround,0,0);
 
         if (Gdx.input.getX() < 500 || Gdx.input.getX() > 870 || Gdx.input.getY() < 550 || Gdx.input.getY() > 650){
-            game.batch.draw(PlayWait ,500,200, Width_Button, Height_Button);
+            game.batch.draw(playWait,500,200, Width_Button, Height_Button);
         }else{
-            game.batch.draw(PlayActive ,500,200, Width_Button, Height_Button);
+            game.batch.draw(playActive,500,200, Width_Button, Height_Button);
             if (Gdx.input.isTouched()) { game.setScreen(new MyMainScreenGame(game));}
         }
 
         if (Gdx.input.getX() < 500 || Gdx.input.getX() > 870 || Gdx.input.getY() < 750 || Gdx.input.getY() > 850){
-            game.batch.draw(ExitWait ,500,0, Width_Button, Height_Button);
+            game.batch.draw(exitWait,500,0, Width_Button, Height_Button);
         }else{
-            game.batch.draw(ExitActive ,500,0, Width_Button, Height_Button);
+            game.batch.draw(exitActive,500,0, Width_Button, Height_Button);
            if (Gdx.input.isTouched()){Gdx.app.exit();}
         }
 
