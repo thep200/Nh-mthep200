@@ -1,0 +1,33 @@
+
+DragonSprite.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Dragon
+  rotate: false
+  xy: 1, 105
+  size: 433, 577
+  orig: 433, 577
+  offset: 0, 0
+  index: -1
+Dragon1
+  rotate: false
+  xy: 1, 53
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+Dragon2
+  rotate: false
+  xy: 436, 632
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+Dragon3
+  rotate: false
+  xy: 1, 1
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1

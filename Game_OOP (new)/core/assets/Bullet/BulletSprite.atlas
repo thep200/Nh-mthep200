@@ -1,0 +1,12 @@
+
+BulletSprite.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Bullet1
+  rotate: false
+  xy: 1, 1
+  size: 204, 202
+  orig: 204, 202
+  offset: 0, 0
+  index: -1
