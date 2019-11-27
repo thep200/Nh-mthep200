@@ -1,0 +1,19 @@
+
+MonsterSprite.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Monster1
+  rotate: false
+  xy: 1, 1
+  size: 343, 348
+  orig: 343, 348
+  offset: 0, 0
+  index: -1
+Monster2
+  rotate: false
+  xy: 346, 1
+  size: 343, 348
+  orig: 343, 348
+  offset: 0, 0
+  index: -1
